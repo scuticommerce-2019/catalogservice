@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: catalogservice
+  cloud:
+      config:
+        uri: http://localhost:8090
+management:
+        security:
+          enabled: false
+name: Catalog Service version 1.0
+server:
+  port: 21913
