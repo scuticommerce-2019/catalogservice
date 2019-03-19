@@ -18,6 +18,10 @@ public class CategoryService {
         categoryRepository.save(category);
     }
 
+    public void delete(String id){
+        categoryRepository.deleteById(id);
+    }
+
     public List<Category> findAll(){
 
         return categoryRepository.findAll();

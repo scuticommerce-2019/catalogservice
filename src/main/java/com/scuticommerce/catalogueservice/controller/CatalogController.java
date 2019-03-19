@@ -40,4 +40,14 @@ public class CatalogController {
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
+    @DeleteMapping(value="/delete")
+    public ResponseEntity<?> delete(@RequestParam String id){
+
+        logger.debug("Remove category " + id);
+
+        service.delete(id);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
