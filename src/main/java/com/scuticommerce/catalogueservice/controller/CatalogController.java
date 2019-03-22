@@ -11,7 +11,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @RestController
-@RequestMapping(value="/api/catalog/")
+@RequestMapping(value="/api/catalog")
+@CrossOrigin
 public class CatalogController {
 
     Logger logger = LogManager.getRootLogger();
@@ -19,10 +20,10 @@ public class CatalogController {
     @Autowired
     CategoryService service;
 
-    @GetMapping(value="/status")
+        @GetMapping(value="/status")
     public ResponseEntity<?> up(){
 
-        return new ResponseEntity<>("service is up", HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping(value="/all")
