@@ -32,6 +32,12 @@ public class CatalogController {
         return new ResponseEntity<>( service.findAll(), HttpStatus.OK);
     }
 
+    @GetMapping(value="/category")
+    public ResponseEntity<?> findTopLevelCategories(){
+
+        return new ResponseEntity<>( service.findTopLevelCategories(), HttpStatus.OK);
+    }
+
     @PostMapping(value="/add")
     public ResponseEntity<?> addCategory(@RequestBody Category category){
 

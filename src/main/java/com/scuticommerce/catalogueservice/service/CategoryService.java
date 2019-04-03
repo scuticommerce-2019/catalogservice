@@ -27,4 +27,9 @@ public class CategoryService {
         return categoryRepository.findAll();
     }
 
+    public List<Category> findTopLevelCategories(){
+
+        return categoryRepository.findCategoryByLevel(0);
+    }
+
 }
